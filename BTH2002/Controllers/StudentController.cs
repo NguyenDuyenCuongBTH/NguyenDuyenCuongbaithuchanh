@@ -8,9 +8,14 @@ namespace BTH2002.Controllers
         {
             return View();
         }
-         public IActionResult about()
+        [HttpPost]
+        public IActionResult Index(String FullName)
         {
+            string strReturn = " Hello " + FullName;
+            ViewBag.abc = strReturn;
             return View();
         }
+
+        
     }
 }
