@@ -6,6 +6,7 @@ namespace BaiThucHanh0703.Controllers;
 
 public class HomeController : Controller
 {
+    GiaiPhuongTrinh gpt = new GiaiPhuongTrinh();
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -22,6 +23,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
