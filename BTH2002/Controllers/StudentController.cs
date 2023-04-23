@@ -1,21 +1,20 @@
+using BTH2002.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BTH2002.Controllers
 {
     public class StudentController : Controller
     {
-        public IActionResult Index()
+      public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Index(String FullName)
+        public IActionResult Create(Student std)
         {
-            string strReturn = " Hello " + FullName;
-            ViewBag.abc = strReturn;
+            string ketqua = std.StudentCode + "-" + std.FullName + "-" + std.Address;
+            ViewBag.message = ketqua;
             return View();
-        }
-
-        
+        }  
     }
 }
