@@ -49,7 +49,7 @@ namespace BaiThucHanh1004.Controllers
         // GET: Student/Create
         public IActionResult Create()
         {
-             var newID = "";
+            var newID = "";
             if (_context.Student.Count() == 0)
             {
                 newID = "STD0001";
